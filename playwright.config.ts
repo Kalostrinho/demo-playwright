@@ -2,10 +2,11 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 
 const baseDir: string = './pw-results'
+const testDir: string = `${baseDir}/tests`
 const reportsDir: string = `${baseDir}/reports`
 const config: PlaywrightTestConfig = {
   testDir: './tests',
-  outputDir: baseDir,
+  outputDir: testDir,
   testMatch: /.*\.spec\.ts/,
   timeout: 180 * 1000,  // << 3 minutes
   expect: {
