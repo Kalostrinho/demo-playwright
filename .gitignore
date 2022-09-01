@@ -6,6 +6,5 @@
 node_modules/
 
 # PLAYWRIGHT STUFF
-/playwright-results/
-/playwright-report/
+/pw-results/
 /playwright/.cache/

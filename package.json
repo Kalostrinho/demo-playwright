@@ -1,0 +1,15 @@
+{
+  "name": "demo-playwright",
+  "version": "1.0.0",
+  "description": "Just a quick demo for Playwright",
+  "author": {
+    "name": "El Zinho",
+    "email": "jfkalostro@gmail.com"
+  },
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "@playwright/test": "^1.25.1",
+    "chalk": "^5.0.1"
+  },
+  "license": "UNLICENSED"
+}
