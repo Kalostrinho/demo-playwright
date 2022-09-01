@@ -1,0 +1,11 @@
+# YARN STUFF 
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+node_modules/
+
+# PLAYWRIGHT STUFF
+/playwright-results/
+/playwright-report/
+/playwright/.cache/
