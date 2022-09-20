@@ -16,12 +16,15 @@ test.describe('Playwright demo suite', () => {
   test('should open Playwright page', async ({ page }) => {
     await expect(page).toHaveTitle(/Playwright/)
     await expect(pwPage.hasGetStartedLink()).toBeTruthy()
+    pass('Page was opened successfully!')
   })
 
   test('should navigate to the documentation introduction', async ({ page }) => {
     await pwPage.navigateToGetStarted()
     await expect(pwPage.hasInstallationTitle()).toBeTruthy()
-    // Alternatively... 
+    info('Succeeded first assertion!')
     await expect(page).toHaveURL(/.*docs\/intro.*/)
+    info('Succeeded second assertion!')
+    pass('Navigated to documentation page successfully!')
   })
 })

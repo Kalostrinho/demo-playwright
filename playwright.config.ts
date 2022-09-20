@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
     ['junit', { outputFile: `${reportsDir}/pw-junit-report.xml` }],
     ['json', { outputFile: `${reportsDir}/pw-json-report.json` }],
     ['html', { outputFolder: `${reportsDir}/html-report`, open: 'never' }],
-    ['list']
+    ['line']
   ],
   projects: [
     {
