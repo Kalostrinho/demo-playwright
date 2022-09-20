@@ -7,6 +7,14 @@
     "email": "jfkalostro@gmail.com"
   },
   "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "test:demo": "yarn playwright test demo",
+    "test:demo:headed": "yarn playwright test demo --headed",
+    "test:demo:chrome:headed": "yarn playwright test demo --headed --project chromium",
+    "test:demo:safari:headed": "yarn playwright test demo --headed --project webkit",
+    "test:demo:firefox:headed": "yarn playwright test demo --headed --project firefox",
+    "test:report": "npx playwright show-report pw-results/reports/html-report"
+  },
   "devDependencies": {
     "@playwright/test": "^1.25.1",
     "chalk": "^4.1.2"
