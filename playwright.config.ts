@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
     ['junit', { outputFile: `${reportsDir}/pw-junit-report.xml` }],
     ['json', { outputFile: `${reportsDir}/pw-json-report.json` }],
     ['html', { outputFolder: `${reportsDir}/html-report`, open: 'never' }],
-    ['line']
+    ['dot']
   ],
   projects: [
     {
@@ -41,9 +41,18 @@ const config: PlaywrightTestConfig = {
         ...devices['Desktop Safari'],
       },
     },
+    {
+      name: 'demo-api',
+      use: {
+        baseURL: 'http://localhost:3000',
+        extraHTTPHeaders: {
+          'Accept': 'application/json',
+        },
+        
+      }
+    }
   ],
   use: {
-    // baseURL: 'http://localhost:3000',
     navigationTimeout: 30000,
     actionTimeout: 10000,
     ignoreHTTPSErrors: true,
