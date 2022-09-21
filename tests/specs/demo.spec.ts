@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { info, pass, warning } from '../utils/logger'
+import { info, pass } from '../utils/logger'
 import { PlaywrightPage } from '../pages/Playwright.page'
 let pwPage: PlaywrightPage
 
