@@ -13,6 +13,18 @@ const authHeader = {
  */
 test.describe('Playwright API testing suite', () => {
 
+  test.skip('should fail because of wrong welcoming message', async ({ request }) => {
+    const res = await request.get('/welcome', requestOptions)
+    const resBody = await res.json()
+    await info('Asserting response status code 200...')
+    expect(res.status()).toEqual(200)
+    await pass('Successfully validated 200 OK!')
+    await info('Asserting response body...')
+    expect(resBody.message).toEqual('Adios prrrowww!')
+    await pass('Successfully validated response!')  
+    await reqResponse(resBody)
+  })
+
   test('should GET a welcoming message', async ({ request }) => {
     const res = await request.get('/welcome', requestOptions)
     const resBody = await res.json()

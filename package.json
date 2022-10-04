@@ -9,7 +9,7 @@
   "packageManager": "yarn@3.2.3",
   "scripts": {
     "test:api:demo": "yarn playwright test demo.api.spec.ts --project demo-api",
-    "test:ui:demo": "yarn playwright test demo.spec.ts",
+    "test:ui:demo": "yarn playwright test demo.spec.ts --project chromium webkit firefox",
     "test:ui:demo:headed": "yarn playwright test demo.spec.ts --headed",
     "test:ui:demo:chrome:headed": "yarn playwright test demo.spec.ts --headed --project chromium",
     "test:ui:demo:safari:headed": "yarn playwright test demo.spec.ts --headed --project webkit",
